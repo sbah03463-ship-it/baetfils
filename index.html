@@ -157,19 +157,19 @@ footer{background:var(--texte);color:rgba(255,255,255,0.7);padding:2.5rem 4rem;d
 </style>
 </head>
 <body>
-<a class="wa-float" href="https://wa.me/221777544253" target="_blank">💬</a>
+<a class="wa-float" href="https://wa.me/221777544253" target="_blank" aria-label="Contactez-nous sur WhatsApp">💬</a>
 <div class="toast" id="toast"></div>
 <div id="cart-overlay" onclick="closeCart()"></div>
 <nav>
   <div class="logo">BA <span>&</span> FILS</div>
   <ul class="nav-links"><li><a href="#boutique">Boutique</a></li><li><a href="#livraison">Livraison</a></li><li><a href="#avis">Avis clients</a></li></ul>
   <div class="nav-right">
-    <div class="search-box">🔍<input type="text" id="search-input" placeholder="Rechercher..." oninput="handleSearch(this.value)"/></div>
-    <button class="btn-panier" onclick="toggleCart()">🛒 Panier <span class="badge" id="cart-count">0</span></button>
+    <div class="search-box">🔍<input type="text" id="search-input" placeholder="Rechercher..." aria-label="Rechercher des produits" oninput="handleSearch(this.value)"/></div>
+    <button class="btn-panier" onclick="toggleCart()" aria-label="Ouvrir le panier d'achat">🛒 Panier <span class="badge" id="cart-count" aria-label="Nombre d'articles dans le panier">0</span></button>
   </div>
 </nav>
 <div id="cart-drawer">
-  <button class="btn-close" onclick="closeCart()">✕</button>
+  <button class="btn-close" onclick="closeCart()" aria-label="Fermer le panier">✕</button>
   <div class="cart-title">🛒 Mon panier</div>
   <div id="cart-items"><p style="color:var(--texte-muted);font-size:0.85rem">Votre panier est vide.</p></div>
   <div class="cart-total" id="cart-total"></div>
@@ -210,15 +210,15 @@ footer{background:var(--texte);color:rgba(255,255,255,0.7);padding:2.5rem 4rem;d
 <div class="cats-section">
   <div class="cats-title">Parcourir par catégorie</div>
   <div class="cats-grid">
-    <div class="cat-card active" onclick="filterCat('all',this)"><span class="cat-emoji">🏪</span><div class="cat-name">Tout</div></div>
-    <div class="cat-card" onclick="filterCat('riz',this)"><span class="cat-emoji">🌾</span><div class="cat-name">Riz</div></div>
-    <div class="cat-card" onclick="filterCat('huile',this)"><span class="cat-emoji">🫙</span><div class="cat-name">Huiles</div></div>
-    <div class="cat-card" onclick="filterCat('lait',this)"><span class="cat-emoji">🥛</span><div class="cat-name">Lait</div></div>
-    <div class="cat-card" onclick="filterCat('epicerie',this)"><span class="cat-emoji">🛒</span><div class="cat-name">Épicerie</div></div>
-    <div class="cat-card" onclick="filterCat('eau',this)"><span class="cat-emoji">💧</span><div class="cat-name">Eau</div></div>
-    <div class="cat-card" onclick="filterCat('entretien',this)"><span class="cat-emoji">🧺</span><div class="cat-name">Entretien</div></div>
-    <div class="cat-card" onclick="filterCat('hygiene',this)"><span class="cat-emoji">🌸</span><div class="cat-name">Hygiène</div></div>
-    <div class="cat-card" onclick="filterCat('bebe',this)"><span class="cat-emoji">👶</span><div class="cat-name">Bébé</div></div>
+    <div class="cat-card active" onclick="filterCat('all',this)" role="button" tabindex="0" aria-label="Afficher tous les produits"><span class="cat-emoji">🏪</span><div class="cat-name">Tout</div></div>
+    <div class="cat-card" onclick="filterCat('riz',this)" role="button" tabindex="0" aria-label="Filtrer par riz"><span class="cat-emoji">🌾</span><div class="cat-name">Riz</div></div>
+    <div class="cat-card" onclick="filterCat('huile',this)" role="button" tabindex="0" aria-label="Filtrer par huiles"><span class="cat-emoji">🫙</span><div class="cat-name">Huiles</div></div>
+    <div class="cat-card" onclick="filterCat('lait',this)" role="button" tabindex="0" aria-label="Filtrer par lait"><span class="cat-emoji">🥛</span><div class="cat-name">Lait</div></div>
+    <div class="cat-card" onclick="filterCat('epicerie',this)" role="button" tabindex="0" aria-label="Filtrer par épicerie"><span class="cat-emoji">🛒</span><div class="cat-name">Épicerie</div></div>
+    <div class="cat-card" onclick="filterCat('eau',this)" role="button" tabindex="0" aria-label="Filtrer par eau"><span class="cat-emoji">💧</span><div class="cat-name">Eau</div></div>
+    <div class="cat-card" onclick="filterCat('entretien',this)" role="button" tabindex="0" aria-label="Filtrer par produits d'entretien"><span class="cat-emoji">🧺</span><div class="cat-name">Entretien</div></div>
+    <div class="cat-card" onclick="filterCat('hygiene',this)" role="button" tabindex="0" aria-label="Filtrer par hygiène"><span class="cat-emoji">🌸</span><div class="cat-name">Hygiène</div></div>
+    <div class="cat-card" onclick="filterCat('bebe',this)" role="button" tabindex="0" aria-label="Filtrer par produits pour bébé"><span class="cat-emoji">👶</span><div class="cat-name">Bébé</div></div>
   </div>
 </div>
 <div class="bestsellers-section">
